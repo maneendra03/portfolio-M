@@ -1,0 +1,13 @@
+.animated-text {
+    display: inline-block;
+}
+
+.char-wrap {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.char {
+    display: inline-block;
+    will-change: transform, opacity;
+}
