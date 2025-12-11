@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { HiMenuAlt4, HiX, HiDownload } from 'react-icons/hi';
 import './Navbar.css';
 
 const navLinks = [
@@ -65,6 +65,19 @@ const Navbar = () => {
                     ))}
                 </div>
 
+                {/* Resume CTA Button */}
+                <motion.a
+                    href="/mani_Resume_updated_2.pdf"
+                    download="Maneendra_Gudipally_Resume.pdf"
+                    className="navbar-resume"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                >
+                    <HiDownload />
+                    <span>Resume</span>
+                </motion.a>
+
                 <motion.button
                     className="navbar-toggle"
                     onClick={() => setIsOpen(!isOpen)}
@@ -99,6 +112,17 @@ const Navbar = () => {
                                 {link.name}
                             </motion.a>
                         ))}
+                        {/* Mobile Resume Link */}
+                        <motion.a
+                            href="/mani_Resume_updated_2.pdf"
+                            download="Maneendra_Gudipally_Resume.pdf"
+                            className="mobile-link mobile-resume"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: navLinks.length * 0.1 }}
+                        >
+                            <HiDownload /> Resume
+                        </motion.a>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -107,3 +131,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

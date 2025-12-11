@@ -302,8 +302,8 @@
 
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
     perspective: 1000px;
 }
 
@@ -311,14 +311,14 @@
 .featured-project {
     position: relative;
     background: rgba(255, 255, 255, 0.03);
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    border-radius: 24px;
-    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 28px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     transform-style: preserve-3d;
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px -10px rgba(0, 0, 0, 0.4);
 }
 
 .featured-project::before {
@@ -327,17 +327,17 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, #fff, #666);
 }
 
 .featured-project:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05);
     box-shadow:
-        0 30px 60px -15px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(255, 255, 255, 0.08);
+        0 20px 50px -15px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.06);
 }
 
 /* Background Effects - B&W */
@@ -367,47 +367,47 @@
 .project-badge {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 30px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .badge-number {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     color: #000;
     background: #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
+    padding: 5px 10px;
+    border-radius: 16px;
 }
 
 .badge-category {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-muted);
     background: rgba(255, 255, 255, 0.05);
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 5px 12px;
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Project Icon - B&W */
 .project-icon-wrap {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    margin-bottom: 18px;
 }
 
 .project-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 

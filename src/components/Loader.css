@@ -1,0 +1,141 @@
+/* ===================================
+   LOADING SCREEN
+   =================================== */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    z-index: 1;
+}
+
+/* Logo */
+.loader-logo {
+    display: flex;
+    align-items: baseline;
+}
+
+.logo-letter {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+
+.logo-dot {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #666;
+    line-height: 1;
+}
+
+.loader-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+/* Progress Bar */
+.loader-progress {
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #888);
+    border-radius: 2px;
+}
+
+.loader-text {
+    font-size: 0.75rem;
+    color: #444;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Background Lines */
+.loader-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.bg-line {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.line-1 {
+    width: 1px;
+    height: 100%;
+    left: 20%;
+    animation: lineMove 2s ease-in-out infinite;
+}
+
+.line-2 {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    animation: lineMove 2s ease-in-out infinite 0.5s;
+}
+
+.line-3 {
+    width: 1px;
+    height: 100%;
+    left: 80%;
+    animation: lineMove 2s ease-in-out infinite 1s;
+}
+
+@keyframes lineMove {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleY(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .logo-letter,
+    .logo-dot {
+        font-size: 3.5rem;
+    }
+
+    .loader-name {
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+    }
+
+    .loader-progress {
+        width: 150px;
+    }
+}

@@ -312,11 +312,17 @@
 
 @media (max-width: 768px) {
     .business-header {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .business-title {
         font-size: clamp(2.5rem, 10vw, 4rem);
+        margin-bottom: 20px;
+    }
+
+    .business-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .business-card {
@@ -386,30 +392,43 @@
 
 @media (max-width: 480px) {
     .business {
-        padding: 80px 0;
+        padding: 70px 0;
+    }
+
+    .business-header {
+        margin-bottom: 40px;
+    }
+
+    .business-title {
+        font-size: clamp(2rem, 12vw, 3rem);
+        margin-bottom: 16px;
     }
 
     .business-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
 
     .business-card {
-        padding: 24px 20px;
-        gap: 24px;
-        border-radius: 24px;
+        padding: 24px 18px;
+        gap: 28px;
+        border-radius: 20px;
     }
 
     .card-badge {
         padding: 6px 12px;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        margin-bottom: 18px;
     }
 
     .card-title {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+        margin-bottom: 14px;
     }
 
     .card-description {
         font-size: 0.85rem;
+        line-height: 1.6;
     }
 
     .mockup-screen {

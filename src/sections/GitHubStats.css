@@ -1,0 +1,219 @@
+/* ===================================
+   GITHUB STATS SECTION
+   =================================== */
+
+.github-stats {
+    background: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header */
+.github-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.github-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.github-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 12px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.stat-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Contribution Graph */
+.contribution-section {
+    margin-bottom: 50px;
+}
+
+.contribution-graph {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.graph-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.graph-icon {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.graph-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* GitHub CTA */
+.github-cta {
+    text-align: center;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: transparent;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.github-btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .github-header {
+        margin-bottom: 40px;
+    }
+
+    .stats-grid {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .stat-card {
+        padding: 24px 20px;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .contribution-graph {
+        padding: 20px;
+    }
+
+    .graph-image {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px 16px;
+    }
+
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .stat-value {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .github-btn {
+        padding: 14px 24px;
+        font-size: 0.85rem;
+    }
+}

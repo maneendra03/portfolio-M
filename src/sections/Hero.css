@@ -402,6 +402,7 @@
         gap: 12px;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 60px;
     }
 
     .social-link {
@@ -416,7 +417,13 @@
     }
 
     .scroll-indicator {
-        bottom: 20px;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 30px auto 0;
+        display: flex;
+        align-self: center;
     }
 }
 
@@ -435,12 +442,22 @@
     }
 
     .hero-socials {
-        gap: 10px;
+        gap: 8px;
+        margin-bottom: 40px;
     }
 
     .social-link {
         width: 40px;
         height: 40px;
+        font-size: 1rem;
+    }
+
+    .scroll-indicator {
+        margin-top: 20px;
+        font-size: 0.65rem;
+    }
+
+    .scroll-arrow {
         font-size: 1rem;
     }
 }
