@@ -310,21 +310,34 @@
 /* Featured Project Card - B&W */
 .featured-project {
     position: relative;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.12);
     border-radius: 24px;
     padding: 40px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     transform-style: preserve-3d;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.featured-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fff, #666);
 }
 
 .featured-project:hover {
-    transform: translateY(-10px);
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 30px 60px -15px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.08);
 }
 
 /* Background Effects - B&W */
@@ -382,19 +395,19 @@
 
 /* Project Icon - B&W */
 .project-icon-wrap {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     margin-bottom: 24px;
 }
 
 .project-icon {
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: #fff;
 }
 
